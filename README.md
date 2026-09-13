@@ -5,8 +5,12 @@ acoustic anomaly model, and surfaces any mismatch — worker says "sounds
 fine" but the model hears an anomaly, or vice versa — as a flagged event on
 a live dashboard.
 
-**🔗 Live demo:** [ADD YOUR VERCEL URL HERE](#)
-**🔗 API:** [ADD YOUR RENDER URL HERE](#)
+**🔗 Live demo:** [site-ear.vercel.app](https://site-ear.vercel.app)
+**🔗 API:** [site-ear-api.onrender.com](https://site-ear-api.onrender.com)
+
+> Note: the API runs on Render's free tier and may take 30–60 seconds to
+> wake up if it's been idle. If the demo looks slow to load at first, give
+> it a moment — it's just spinning up.
 
 ---
 
@@ -62,7 +66,9 @@ voice_agent.py  →  FastAPI backend  →  React dashboard
 - Deploy using the included `render.yaml`.
 - It installs dependencies and trains the committed audio dataset during
   the build, then starts FastAPI on Render's assigned port.
-- Set `FRONTEND_ORIGINS` to the final Vercel URL.
+- Set `FRONTEND_ORIGINS` to the final Vercel URL — **no trailing slash**
+  (e.g. `https://site-ear.vercel.app`, not `.../`), since CORS origin
+  matching is an exact string match.
 
 **Frontend (Vercel):**
 - Set the project root to `site-ear-dashboard`.
