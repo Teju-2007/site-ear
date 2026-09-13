@@ -1,0 +1,14 @@
+.env
+site-ear-dashboard/.env
+venv/
+.venv/
+.site-ear-venv/
+.test-venv/
+node_modules/
+__pycache__/
+*.pyc
+features.csv
+acoustic_model.joblib
+site_ear_log.jsonl
+flagged_clips/
+site-ear-dashboard/dist/
